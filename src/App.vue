@@ -2,7 +2,8 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/twowaybinding">Two Way Binding</router-link> |
-    <router-link to="/watchers">Watchers</router-link>
+    <router-link to="/watchers">Watchers</router-link> |
+    <router-link to="/piniastate">Pinia</router-link>
   </div>
   <router-view />
 </template>

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import PassingProps from '../views/PassingProps.vue'
 import Watchers from '@/views/Watchers.vue'
+import PiniaStore from '@/views/PiniaStore.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/watchers',
     name: 'Watchers',
     component: Watchers
+  },
+  {
+    path: '/piniastate',
+    name: 'piniastate',
+    component: PiniaStore
   }
 ]
 

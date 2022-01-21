@@ -9,6 +9,7 @@
       <h1>GetProfile - {{ profile() }}</h1>
       <h1>Provide Inject - {{ userName }}</h1>
       <h2>Getter Setter - {{ firstNames }}</h2>
+      <h2>Pinia Store - {{ main.counter }}</h2>
       <Button
         label="Submit"
         @click="execute(firstName, lastName, mobileNumber, panNumber)"
@@ -19,6 +20,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import { useMainStore } from "@/Store/CounterStore";
 
 @Options({
   props: {
@@ -32,6 +34,7 @@ import { Options, Vue } from "vue-class-component";
 export default class Props_ChildComponent extends Vue {
   private userName!: string;
   private firstName!: string;
+  main = useMainStore();
 
   get firstNames(): string {
     return " Sairam " + this.firstName;
