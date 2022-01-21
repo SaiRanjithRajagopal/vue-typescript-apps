@@ -18,7 +18,9 @@ export const useProductStore = defineStore({
         return this.products;
       },
       saveProducts(receivedProducts: Products[]) : void {
-        this.$patch({products: {...receivedProducts},count : receivedProducts.length})
+        this.$patch({
+          products: {...receivedProducts},
+          count : receivedProducts.length});
       //   console.log(tempData.length + 'tempData')
       //   this.$patch({products: {...tempData},count : receivedProducts.length})
         //console.log( this.products[0].price )

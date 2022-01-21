@@ -1,5 +1,5 @@
 <template>
-  <p>counter - {{ counter }}</p>
+  <p>counter - {{ main.counter }}</p>
   <Button label="Increase" @click="increaseCounter()" />
 </template>
 
@@ -9,12 +9,12 @@ import { useMainStore } from "@/Store/CounterStore";
 
 export default class Pinia extends Vue {
   counter: number | 0 = 0;
+  main = useMainStore();
 
   increaseCounter(): void {
-    const main = useMainStore();
-    main.PiniaIncrementCounter();
-    console.log("Trigerred" + main.counter);
-    this.counter = main.counter;
+    this.main.PiniaIncrementCounter();
+    console.log("Trigerred" + this.main.counter);
+    this.counter = this.main.counter;
   }
 }
 </script>
