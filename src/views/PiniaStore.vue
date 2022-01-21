@@ -8,7 +8,7 @@ import { Vue } from "vue-class-component";
 import { useMainStore } from "@/Store/CounterStore";
 
 export default class Pinia extends Vue {
-  counter: number | 0 = -1;
+  counter: number | 0 = 0;
 
   increaseCounter(): void {
     const main = useMainStore();

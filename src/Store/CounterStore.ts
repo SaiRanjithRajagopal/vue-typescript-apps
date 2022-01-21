@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useMainStore = defineStore({
   id: 'main',
   state: () => ({
-    counter: -10,
+    counter: 0,
     name: 'Eduardo',
   }),
   getters: {
@@ -21,6 +21,7 @@ export const useMainStore = defineStore({
     PiniaIncrementCounter() {
       console.log('PiniaIncrementCounter');
       this.counter++;
+      console.log('this.doubleCount'+ this.doubleCount);
     },
   },
 })
